@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
   token.associate = function(models) {
     // associations can be defined here
 
-    token.belongsTo(models.User, {
+    token.belongsTo(models.user, {
       foreignKey: 'user_id',
       as: 'user'
     });

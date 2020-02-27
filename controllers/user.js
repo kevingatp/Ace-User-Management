@@ -4,11 +4,11 @@
  * All rights reserved.
  */
 
-const User = require('../models/users');
-const Token = require('../models/token');
-
-module.exports = {
-    getUser: function () {
-        
-    }    
-}
+    const User = require('../models').user;
+    module.exports = {
+        getUser: function (req, res) {
+            User.findAll().then(value => {
+                res.json(value);
+            })
+        }
+    }
